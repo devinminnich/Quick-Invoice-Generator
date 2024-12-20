@@ -158,6 +158,7 @@ table, th, td {
 }
 body.dark-mode table, body.dark-mode th, body.dark-mode td {
     border: 1px solid #4b6584;
+    background: #25273c;
 }
 th, td {
     padding: 12px;
