@@ -1,33 +1,35 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
     margin: 0;
     padding: 0;
+    color: #333;
     transition: background-color 0.3s, color 0.3s;
 }
 body.dark-mode {
-    background-color: #2c2c2c;
+    background-color: #1a1a2e;
     color: #f1f1f1;
 }
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
 }
 body.dark-mode .container {
-    background: #3a3a3a;
+    background: #25273c;
 }
 h1 {
     text-align: center;
-    color: #333;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 body.dark-mode h1 {
-    color: #f1f1f1;
+    color: #ecf0f1;
 }
 .switch-container {
     position: absolute;
@@ -40,11 +42,15 @@ body.dark-mode h1 {
     margin-right: 10px;
     font-size: 16px;
     font-weight: bold;
+    color: #2c3e50;
+}
+body.dark-mode .switch-label {
+    color: #ecf0f1;
 }
 .switch {
     position: relative;
     display: inline-block;
-    width: 34px;
+    width: 40px;
     height: 20px;
 }
 .switch input {
@@ -75,111 +81,101 @@ body.dark-mode h1 {
     border-radius: 50%;
 }
 input:checked + .slider {
-    background-color: #007bff;
+    background-color: #2c3e50;
 }
 input:checked + .slider:before {
-    transform: translateX(14px);
-}
-form {
-    margin-top: 20px;
+    transform: translateX(20px);
 }
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .form-group label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .form-group input, .form-group textarea, .form-group select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 body.dark-mode .form-group input, body.dark-mode .form-group textarea, body.dark-mode .form-group select {
-    background: #4a4a4a;
-    color: #f1f1f1;
-    border: 1px solid #666;
+    background: #2c3e50;
+    color: #ecf0f1;
+    border: 1px solid #4b6584;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #3498db;
+    color: white;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #2980b9;
+}
+.add-service {
+    background-color: #27ae60;
+}
+.add-service:hover {
+    background-color: #229954;
+}
+.clear-form {
+    background-color: #e74c3c;
+}
+.clear-form:hover {
+    background-color: #c0392b;
 }
 .invoice-preview {
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 12px;
     background: #f9f9f9;
 }
 body.dark-mode .invoice-preview {
-    background: #4a4a4a;
-    border: 1px solid #666;
-}
-.preview-header {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
+    background: #25273c;
+    border: 1px solid #4b6584;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 20px;
+    background: white;
 }
 table, th, td {
     border: 1px solid #ddd;
 }
 body.dark-mode table, body.dark-mode th, body.dark-mode td {
-    border: 1px solid #666;
+    border: 1px solid #4b6584;
 }
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
+    font-size: 1rem;
 }
-.text-right {
-    text-align: right;
+th {
+    background: #f4f6f9;
 }
-.btn {
-    display: block;
-    width: 100%;
-    background: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
+body.dark-mode th {
+    background: #2c3e50;
 }
-.btn:hover {
-    background: #0056b3;
-}
-.add-service {
-    margin-top: 10px;
-    background-color: #6f42c1;
-}
-.add-service:hover {
-    background-color: #5a3799;
-}
-.remove-service {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.remove-service:hover {
-    background-color: #c82333;
-}
-.clear-form {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-.clear-form:hover {
-    background-color: #5a6268;
+#companylogo {
+    display:flex;
+    width: 150px;
+    padding:10px;
+    margin:10px;
+    justify-content:space-between;
+    align-items:baseline;
+    border-radius:20%
 }
